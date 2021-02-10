@@ -1,0 +1,158 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    font-size: 12px;
+}
+.mt-xl {
+    margin-top: 40px;
+}
+.contain {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.main-menu ul > li a {
+    padding: 11px 6px 0 6px;
+    font-size: 12px;
+}
+
+@media (min-width:992px) {
+    .main-menu ul > li a  {
+        font-size: 16px;
+        padding: 11px 8px 0 8px;
+    }
+}
+
+/* @media  */
+/* 
+body > header .header .col-xl-9,
+body > header .header  .col-lg-9,
+body > header .header  .col-md-9,
+body > header .header  .col-sm-9 {
+    padding-left: 0;
+    padding-right: 0;
+} */
+
+.ay-button {
+    min-width: 175px;
+    background-color: #81256C;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+/* Gallery */
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.content {
+    margin-bottom: 80px;
+}
+.content.sections {
+    margin-top: 80px;
+}
+
+img {
+    object-fit: cover;
+}
+
+.image img {
+    max-width: unset;
+}
+.ay-relative {
+    position: relative;
+}
+ 
+.overlay{
+    opacity: .52;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/**
+    Grid
+*/
+
+.images {
+    display: grid;
+    grid-template-columns: repeat(10, minmax(100%, 1fr));
+    overflow-x: auto;
+    grid-auto-rows: 50vh;
+    gap: 1rem;
+}
+
+
+@media (min-width: 700px) {
+    .images {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-auto-rows: 250px;
+    }
+    
+    .image.img-col-2 {
+        grid-column: unset;
+    }
+    .image.img-row-2 {
+        grid-row: unset;
+    }
+
+}
+
+
+@media (min-width: 1200px) {
+    .images {
+        /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+        grid-auto-rows: 250px;
+    }   
+    .image.img-col-2 {
+        grid-column: span 2 / auto;
+    }
+    .image.img-row-2 {
+        grid-row: span 2 / auto;
+    }
+}
+
+
+@media (min-width: 576px) {
+    .mt-xl {
+        margin-top: 140px;
+    }
+}
+
+@media (min-width: 700px) {
+    .contain {
+        padding: 0;
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 992px) {
+    .contain {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .contain {
+        max-width: 1140px;
+}
